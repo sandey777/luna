@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+	<meta name="desсription" content="DEVO">
+
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<link rel="icon" href="img/logo.png">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/ui/script.js"></script>
+	<script src="js/ui/scriptcroll.js"></script>
+
+	<title>DEVO PROJECT</title>
+
+</head>
+
+<body>
+	
+	<header>
+
+	<img id="logo" src="img/title_logo.png"/>
+
+	<div id="title_tabs" style="
+		z-index: 999;
+	">
+
+		<div detect_link="index.html" onclick="
+			location.href = 'index.html';
+		">Главная</div>
+
+		<div detect_link="donate.html" onclick="
+			location.href = 'donate.html';
+		">Пополнить счет</div>
+
+		<div onclick="
+			window.open('https://vk.com/hayzens');
+		">Тех. поддержка</div>
+
+		<div onclick="
+			window.open('https://vk.com/hayzens');
+		">Группа ВКонтакте</div>
+
+	</div>
+
+</header>
+
+<script>
+	
+	$('#title_tabs').ready(function(){
+
+		$.each( $('#title_tabs div'), function( index, item ){
+
+			if( $(item).attr('detect_link') == window.location.pathname ){
+
+				$(item).addClass('tab_detected');
+				$(item).css('color', '#ffffff');
+
+			}
+
+		} );
+
+	});
+
+</script>
+	<div class="block"  style="width: 60%; height: fit-content;
+		font-family: montserrat;
+		font-size: 15px;
+	">
+
+		<br/>
+		<br/>
+
+		<h2 class="h2-text">Политика возврата платежей</h2>
+		<p>Уважаемые Клиенты, информируем Вас о&nbsp;том, что при запросе возврата денежных средств при отказе от&nbsp;покупки, возврат производится исключительно на&nbsp;ту&nbsp;же банковскую карту, с&nbsp;которой была произведена оплата.</p>
+		<br/>
+		<h2 class="h2-text">Политика безопасности</h2>
+		<p>При оплате заказа банковской картой, обработка платежа (включая ввод номера карты) происходит на&nbsp;защищенной странице процессинговой системы, которая прошла международную сертификацию. Это значит, что Ваши конфиденциальные данные (реквизиты карты, регистрационные данные и&nbsp;др.) не&nbsp;поступают, их&nbsp;обработка полностью защищена и&nbsp;никто, в&nbsp;том числе&nbsp;мы, не&nbsp;можем получить персональные и&nbsp;банковские данные клиента.
+			При работе с&nbsp;карточными данными применяется стандарт защиты информации, разработанный международными платёжными системами Visa и&nbsp;Masterсard-Payment Card Industry Data Security Standard (PCI&nbsp;DSS), что обеспечивает безопасную обработку реквизитов Банковской карты Держателя.
+		Применяемая технология передачи данных гарантирует безопасность по&nbsp;сделкам с&nbsp;Банковскими картами путем использования протоколов Secure Sockets Layer (SSL), Verifiedby Visa, Secure Code,и закрытых банковских сетей, имеющих высшую степень защиты.</p>
+		<br/>
+		<h2 class="h2-text">Правила возврата платежей</h2>
+		<p>1. Клиент может получить возврат средств в&nbsp;случае, если он&nbsp;не&nbsp;получил услугу,
+			заказанную на&nbsp;сайте devomta.ru, в&nbsp;течение 72&nbsp;часов.
+			<br/>2. Возврат средств предоставляется при обращении по&nbsp;ссылке https://vk.com/hayzens (написать сообщение),
+		в&nbsp;запросе укажите ваши игровые данные (логин), дату и&nbsp;сумму платежа.</p>
+
+		<br/>
+
+	</div>
+
+	<footer>
+
+	<div id="footer_buttons">
+
+		<div><a href="return_money.html">Политика возврата средств</a></div>
+		<div><a href="rules.html">Правила сервиса</a></div>
+		<div><a href="https://vk.com/hayzens">Служба поддержки</a></div>
+
+	</div>
+
+	<div style="
+		position: absolute;
+		right: 100px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		height: fit-content;
+	">
+		<img src="https://www.free-kassa.ru/img/fk_btn/22.png" width="150"/>
+	</div>
+
+
+</footer>
+
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>

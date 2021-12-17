@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+	<meta name="desсription" content="DEVO">
+
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<link rel="icon" href="img/logo.png">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/script.js"></script>
+
+	<title>LUNA</title>
+
+</head>
+
+<body>
+	
+	<header>
+
+	<img id="logo" src="img/title_logo.png"/>
+
+	<div id="title_tabs" style="
+		z-index: 999;
+	">
+
+		<div detect_link="index.html" onclick="
+			location.href = 'index.html';
+		">Главная</div>
+
+		<div detect_link1="donate.html" onclick="
+			location.href = 'donate.html';
+		">Пополнить счет</div>
+
+		<div onclick="
+			window.open('https://vk.com/sandeu');
+		">Тех. поддержка</div>
+
+		<div onclick="
+			window.open('https://vk.com/lunamta');
+		">Группа ВКонтакте</div>
+
+	</div>
+
+</header>
+
+<script>
+	
+	$('#title_tabs').ready(function(){
+
+		$.each( $('#title_tabs div'), function( index, item ){
+
+			if( $(item).attr('detect_link1')){
+
+				$(item).addClass('tab_detected');
+				$(item).css('color', '#ffffff');
+
+			}
+
+		} );
+
+	});
+
+</script>
+	<div class="block" style="width: 60%; height: 450px;">
+
+		<div class="dtitle">
+
+			<div style="
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				height: fit-content;
+			">
+
+				<h2 class="h2-text">
+				Пополнение <a style="color: #ffba57">игрового</a> счета<br/>
+				</h2>
+
+				<div id="title-text">
+
+					Хочешь крутую машину на сервере, но работать нет времени? <br/>
+					Открой новые возможности благодаря премиум-валюте <a style="color: #ffba57">L-Coin</a>!<br/>
+					<br/>
+					Ты сможешь приобрести множество уникальных наборов<br/>
+					и автомобилей, а также сконвертировать в игровые доллары.<br/>
+					<br/>
+					Курс покупки - <a style="color: #ffba57">1</a> L-Coin = <a style="color: #ffba57">1</a> рос. руб.<br/>
+					* Платеж является добровольным пожертвованием<br/>
+
+
+				</div>
+
+				<br/>
+
+			</div>
+			
+
+		</div>
+
+		<div class="dtitle">
+			
+			<img src="img/dcar.png" id="dtitle_img"/>
+
+		</div>
+
+	</div>
+
+	<div class="block" style="height: 370px;">
+		
+		<!-- <h2 class="h2-text" style="text-align: center; margin-bottom: 10px;">
+			Выбери сервер и сумму L-Coin
+		</h2>
+
+		<br/>
+		<br/> -->
+
+		<div id="dserver_list">
+			
+
+
+				<div class="dserver-display img-h " onclick="
+					if(true){
+						$(`.dserver-display`).addClass(`img-h`);
+						$(`#dserver_list`).attr(`server`, 1-1);
+						$(this).removeClass(`img-h`);
+					}
+				" style="background-image: url(img/dserver1.png);">
+
+					<img src="img/selserver.png"/>
+
+					<st1>Сервер #1</st1>
+
+				</div>
+
+			
+
+				<div class="dserver-display img-h hidden" onclick="
+					if(false){
+						$(`.dserver-display`).addClass(`img-h`);
+						$(`#dserver_list`).attr(`server`, 2-1);
+						$(this).removeClass(`img-h`);
+					}
+				" style="background-image: url(img/dserver2.png);">
+
+					<img src="img/selserver.png"/>
+
+					<st1>Сервер #2</st1>
+
+				</div>
+
+					</div>
+
+		<div id="dinput_list">
+			<div><input placeholder="Введите логин" id="donat-login"/></div>
+			<div><input placeholder="Введите сумму" type="number" id="donat-sum"/></div>
+		</div>
+
+		<br/>
+		<br/>
+
+		<button id="dbutton" onclick="
+			buyDonat();
+		">Перейти к оплате</button>
+
+	</div>
+
+	<footer>
+
+	<div id="footer_buttons">
+
+		<div><a href="return_money.html">Политика возврата средств</a></div>
+		<div><a href="rules.html">Правила сервиса</a></div>
+		<div><a href="https://vk.com/sandeu">Служба поддержки</a></div>
+
+	</div>
+
+	<div style="
+		position: absolute;
+		right: 100px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		height: fit-content;
+	">
+		<img src="https://www.free-kassa.ru/img/fk_btn/22.png" width="150"/>
+	</div>
+
+
+</footer>
+
+	<script src="js/scripts.js"></script>
+
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+
+			var children = $('#dserver_list').children();
+			if( children.length == 1 ){
+				$(children[0]).click();
+			}
+
+		});
+
+	</script>
+
+	<script type="text/javascript">
+
+		function replaceAll(text, search, replace){
+		    return text.split(search).join(replace);
+		}
+
+		function urlDecode(str){
+			var result = decodeURI(str);
+			result = replaceAll(result, '#', '%23');
+			result = replaceAll(result, '+', '%2B');
+			return result;
+		}
+
+		function showError(text){
+			alert(text);
+		}
+
+
+		function buyDonat(){
+
+			var accountName = $(`#donat-login`).val();
+
+			var serverId = $(`#dserver_list`).attr('server');
+
+		    var sum = parseInt($('#donat-sum').val());
+
+		    if(isNaN(sum)){
+		        return showError('Неверно указана сумма');
+		    }
+
+		    if(sum < 30){
+		        return showError('Минимальная сумма - 30 руб');
+		    }
+
+			if(!accountName){
+				return showError('Вы не заполнили все поля');
+			}
+
+			if(!serverId){
+				return showError('Вы не выбрали сервер');
+			}
+
+			if( ! (accountName && sum) ){ return false; }
+
+			$.ajax({
+				type: 'GET',
+				url: `checkaccount.php?name=${urlDecode(accountName)}&serverid=${serverId}`,
+				success: function(data){
+					console.log(data);
+					var response = JSON.parse(data);
+					if(response.accountExists){
+						location.href = `/pay_redirect.php?sum=${sum}&account=DONAT;${urlDecode(accountName)};${serverId}&desc=Покупка%20валюты%20DEVO`;
+					} else {
+						showError('Аккаунт не найден');
+					}
+				},
+				error: function(){
+					showError('Неизвестная ошибка');
+				},
+			});
+		}
+
+	</script>
+
+</body>
+</html>

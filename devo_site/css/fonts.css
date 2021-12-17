@@ -1,0 +1,113 @@
+
+@font-face {
+	font-family: hb;
+	src: url(fonts/hb.ttf);
+}
+@font-face {
+	font-family: hb_bold;
+	src: url(fonts/hb_bold.ttf);
+}
+@font-face {
+	font-family: hb_bold_italic;
+	src: url(fonts/hb_bold_italic.ttf);
+}
+@font-face {
+	font-family: hb_bold_slanted;
+	src: url(fonts/hb_bold_slanted.ttf);
+}
+@font-face {
+	font-family: hb_extrabold;
+	src: url(fonts/hb_extrabold.ttf);
+}
+@font-face {
+	font-family: hb_extrabold_italic;
+	src: url(fonts/hb_extrabold_italic.ttf);
+}
+@font-face {
+	font-family: hb_italic;
+	src: url(fonts/hb_italic.ttf);
+}
+@font-face {
+	font-family: hb_light;
+	src: url(fonts/hb_light.ttf);
+}
+@font-face {
+	font-family: hb_medium;
+	src: url(fonts/hb_medium.ttf);
+}
+@font-face {
+	font-family: hb_medium_italic;
+	src: url(fonts/hb_medium_italic.ttf);
+}
+@font-face {
+	font-family: hb_regular;
+	src: url(fonts/hb_regular.ttf);
+}
+@font-face {
+	font-family: montserrat;
+	src: url(fonts/montserrat.ttf);
+}
+@font-face {
+	font-family: montserrat_black;
+	src: url(fonts/montserrat_black.ttf);
+}
+@font-face {
+	font-family: montserrat_black_italic;
+	src: url(fonts/montserrat_black_italic.ttf);
+}
+@font-face {
+	font-family: montserrat_bold;
+	src: url(fonts/montserrat_bold.ttf);
+}
+@font-face {
+	font-family: montserrat_bold_italic;
+	src: url(fonts/montserrat_bold_italic.ttf);
+}
+@font-face {
+	font-family: montserrat_extrabold;
+	src: url(fonts/montserrat_extrabold.ttf);
+}
+@font-face {
+	font-family: montserrat_extrabold_italic;
+	src: url(fonts/montserrat_extrabold_italic.ttf);
+}
+@font-face {
+	font-family: montserrat_italic;
+	src: url(fonts/montserrat_italic.ttf);
+}
+@font-face {
+	font-family: montserrat_light;
+	src: url(fonts/montserrat_light.ttf);
+}
+@font-face {
+	font-family: montserrat_light_italic;
+	src: url(fonts/montserrat_light_italic.ttf);
+}
+@font-face {
+	font-family: montserrat_medium;
+	src: url(fonts/montserrat_medium.ttf);
+}
+@font-face {
+	font-family: montserrat_medium_italic;
+	src: url(fonts/montserrat_medium_italic.ttf);
+}
+@font-face {
+	font-family: montserrat_regular;
+	src: url(fonts/montserrat_regular.ttf);
+}
+@font-face {
+	font-family: montserrat_semibold;
+	src: url(fonts/montserrat_semibold.ttf);
+}
+@font-face {
+	font-family: montserrat_semibold_italic;
+	src: url(fonts/montserrat_semibold_italic.ttf);
+}
+@font-face {
+	font-family: montserrat_thin;
+	src: url(fonts/montserrat_thin.ttf);
+}
+@font-face {
+	font-family: montserrat_thin_italic;
+	src: url(fonts/montserrat_thin_italic.ttf);
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+	<meta name="desсription" content="DEVO">
+
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<link rel="icon" href="img/logo.png">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fonts.css">
+
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+
+	<meta name="enot" content="9081635723007-OEiKxQOgGraFo173xAoMx_BbSpKOIMh" />
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/ui/script.js"></script>
+	<script src="js/ui/scriptcroll.js"></script>
+
+	<title>LUNA MTA:SA</title>
+
+</head>
+
+<body style="
+    background-image: url(img/mbg.png)!important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+">
+	
+	<header>
+
+	<img id="logo" src="img/title_logo.png"/>
+
+	<div id="title_tabs" style="
+		z-index: 999;
+	">
+
+		<div detect_link="index.html" onclick="
+			location.href = 'index.html';
+		">Главная</div>
+
+		<div detect_link1="donate.html" onclick="
+			location.href = 'donate.html';
+		">Пополнить счет</div>
+
+		<div onclick="
+			window.open('https://vk.com/sandeu');
+		">Тех. поддержка</div>
+
+		<div onclick="
+			window.open('https://vk.com/lunamta');
+		">Группа ВКонтакте</div>
+
+	</div>
+
+</header>
+
+<script>
+	
+	$('#title_tabs').ready(function(){
+
+		$.each( $('#title_tabs div'), function( index, item ){
+
+			if( $(item).attr('detect_link')){
+
+				$(item).addClass('tab_detected');
+				$(item).css('color', '#ffffff');
+
+			}
+
+		} );
+
+	});
+
+</script>
+	<div class="block" style="width: 60%; height: 600px;">
+
+		<div class="start-game-1">
+
+			<div style="
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				height: fit-content;
+			">
+
+				<h2 class="h2-text">
+				<a style="color: #ffba57">LUNA</a> - игровой<br/>
+				проект в Multi Theft Auto
+				</h2>
+
+				<div id="title-text">
+
+					Команда профессиональных разработчиков создала для вас<br/>
+					игровой <c>мультиплеерный</c> проект, полностью сосредоточенный<br/>
+					на автомобильной культуре во всех ее возможных проявлениях.<br/><br/>
+					Тюнинг реальных автомобилей, <c>гонки</c>, дрифт-соревнования<br/>
+					полностью передают атмосферу автолюбительского ремесла.<br/>
+					<!-- <br/> -->
+					<c>Присоединяйся к нам</c> и воплоти все свои мечты в реальность!<br/>
+
+
+				</div>
+
+				<br/>
+
+				<button id="startgame_button" onclick="
+					$('html, body').animate({ scrollTop: 900 }, 400);
+				">НАЧАТЬ ИГРУ</button>
+
+			</div>
+			
+
+		</div>
+
+		<div class="start-game-1">
+			
+			<img src="img/render_startgame.png" id="startgame_img"/>
+
+		</div>
+
+	</div>
+
+	<div class="block" style="height: fit-content;">
+
+		<div style="height: 100px; position: relative;">
+			<img id="howtoplay_icon" src="img/howtoplay_icon.png"/>
+		</div>
+
+		
+		<h2 class="h2-text" style="text-align: center; margin-bottom: 30px;">
+			Настоящее приключение<br/>начнется здесь!
+		</h2>
+
+		<div style="height: 900px; position: relative;">
+			<img id="howtoplay_img" src="img/howtoplay.png"/>
+		</div>
+
+	</div>
+
+	<div class="block" style="height: 360px; margin-bottom: 50px;">
+		
+		<h2 class="h2-text" style="text-align: center; margin-bottom: 50px;">
+			Подключайся к нашим серверам!
+		</h2>
+
+		<br/>
+		<br/>
+
+		<div id="server_list">
+			
+
+
+				<div class="server-display" onclick="
+					window.open('mtasa://IP: 146.59.52.109:22003');
+				">
+
+					<img src="img/server1.png"/>
+
+					<st1>Сервер #1</st1>
+					<st2>Игроки 153 / 500</st2>
+
+				</div>
+
+			
+
+				<div class="server-display" onclick="
+					window.open('mtasa://Скоро открытие...');
+				"style="filter: saturate(0);">
+
+					<img src="img/server2.png"/>
+
+					<st1>Сервер #2</st1>
+					<st2>Скоро открытие</st2>
+
+				</div>
+
+					</div>
+
+	</div>
+
+	<div class="block" style="height: 310px;">
+		
+		<h2 class="h2-text" style="text-align: center; margin-bottom: 30px;">
+			Используй бонус-коды для прокачки!
+		</h2>
+
+		<br/>
+
+		<div id="bonus_list"></div>
+
+		<br/><br/><br/>
+
+		<div style="
+
+			width: 40%;
+			height: 2px;
+			background: #3c3c3c;
+			position: relative;
+			z-index: -1000;
+			margin: auto;
+
+		"></div>
+
+	</div>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			var bonusCodes = [
+
+				{
+
+					name: 'SORRYOPEN',
+					play_hours: 1,
+
+					rewards: [
+						'Кейс стартер',
+					],
+
+				},
+
+				// {
+
+				// 	name: 'BONUS2',
+				// 	play_hours: 6,
+
+				// 	rewards: [
+				// 		'Награда 1',
+				// 		'Награда 2',
+				// 	],
+
+				// },
+
+				// {
+
+				// 	name: 'BONUS3',
+				// 	play_hours: 10,
+
+				// 	rewards: [
+				// 		'Награда 1',
+				// 		'Награда 2',
+				// 	],
+
+				// },
+
+			];
+
+			var bonusesHTML = '';
+
+			for ( var index in bonusCodes ){
+
+				var codeData = bonusCodes[ index ];
+
+				bonusesHTML += `
+				<div class="bonus-code">
+
+					<bt1>Бонус-код</bt1>
+					<bt2>${ codeData.name }</bt2>
+
+					<bt3>
+						${ codeData.rewards.join('<br/>') }
+					</bt3>
+
+					<timer-block>
+
+						<timer-img>
+							<img src="img/timer.png"/>
+						</timer-img>
+						${ codeData.play_hours } ч.
+
+					</timer-block>
+
+				</div>
+				`;
+
+			}
+
+			$('#bonus_list').html( bonusesHTML );
+
+		});
+
+		
+	</script>
+
+ 	<!-- <style>
+
+ 		footer::after {
+
+ 			content: "";
+ 			position: absolute;
+ 			bottom: 100%;
+ 			left: 0;
+ 			right: 0;
+
+ 			background: url( /img/builds.png );
+ 			width: 100%;
+ 			height: 1076px;
+
+ 			z-index: -10;
+ 			opacity: 0.5;
+
+
+ 		}
+
+ 	</style> -->
+
+	<footer>
+
+	<div id="footer_buttons">
+
+		<div><a href="return_money.html">Политика возврата средств</a></div>
+		<div><a href="rules.html">Правила сервиса</a></div>
+		<div><a href="https://vk.com/hayzens">Служба поддержки</a></div>
+
+	</div>
+
+	<div style="
+		position: absolute;
+		right: 100px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		height: fit-content;
+	">
+		<img src="https://www.free-kassa.ru/img/fk_btn/22.png" width="150"/>
+	</div>
+
+
+</footer>
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>
